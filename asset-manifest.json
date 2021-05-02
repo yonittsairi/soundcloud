@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/soundcloud/static/css/main.f1c4fe66.chunk.css",
+    "main.js": "/soundcloud/static/js/main.d53c2a45.chunk.js",
+    "main.js.map": "/soundcloud/static/js/main.d53c2a45.chunk.js.map",
+    "runtime-main.js": "/soundcloud/static/js/runtime-main.0d9e19a9.js",
+    "runtime-main.js.map": "/soundcloud/static/js/runtime-main.0d9e19a9.js.map",
+    "static/js/2.a5e58d8a.chunk.js": "/soundcloud/static/js/2.a5e58d8a.chunk.js",
+    "static/js/2.a5e58d8a.chunk.js.map": "/soundcloud/static/js/2.a5e58d8a.chunk.js.map",
+    "static/js/3.2cdd6329.chunk.js": "/soundcloud/static/js/3.2cdd6329.chunk.js",
+    "static/js/3.2cdd6329.chunk.js.map": "/soundcloud/static/js/3.2cdd6329.chunk.js.map",
+    "index.html": "/soundcloud/index.html",
+    "static/css/main.f1c4fe66.chunk.css.map": "/soundcloud/static/css/main.f1c4fe66.chunk.css.map",
+    "static/js/2.a5e58d8a.chunk.js.LICENSE.txt": "/soundcloud/static/js/2.a5e58d8a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0d9e19a9.js",
+    "static/js/2.a5e58d8a.chunk.js",
+    "static/css/main.f1c4fe66.chunk.css",
+    "static/js/main.d53c2a45.chunk.js"
+  ]
+}
