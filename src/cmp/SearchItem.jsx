@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react'
+import { useDispatch } from 'react-redux';
 import { setSongs } from '../store/actions/song.actions';
 
 export default function SearchItem({ searchWord }) {
@@ -10,7 +10,7 @@ export default function SearchItem({ searchWord }) {
     }
 
     return (
-        <div onClick={search} key={searchWord.id}>
+        <div className="search-card" onClick={search} key={searchWord.id}>
             {searchWord.word}
         </div>
     )

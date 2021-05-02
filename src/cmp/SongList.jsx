@@ -9,7 +9,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getNextSongs } from '../store/actions/song.actions'
 
 export default function SongList({ currSongs }) {
-    const { searchHistory, nextHref } = useSelector(state => state.songModule)
+    const { nextHref } = useSelector(state => state.songModule)
     const dispatch = useDispatch('')
 
 
@@ -33,13 +33,17 @@ export default function SongList({ currSongs }) {
     if (!currSongs.length) return <div></div>
 
     return (
-        <section>
-            <ViewListIcon fontSize={'large'} onClick={() => changeView('list')} />
-            <ViewComfyIcon fontSize={'large'} onClick={() => changeView('tile')} />
-            <div className={className}>
+        <section className="results">
+
+            <div className={className}> <div className="menu flex align-center space-between">
+                <div className="flex align-center"><ViewListIcon fontSize={'large'} onClick={() => changeView('list')} />
+                    <ViewComfyIcon fontSize={'large'} onClick={() => changeView('tile')} />
+                </div>
+                {nextHref && <ArrowForwardTwoToneIcon fontSize={'large'} onClick={paginate} />}
+            </div>
                 {currSongs.map(song => <SongCard key={song.id} song={song} />
                 )}
-                {nextHref && <ArrowForwardTwoToneIcon fontSize={'large'} onClick={paginate} />}
+
             </div>
 
         </section>

@@ -2,10 +2,7 @@
     box-sizing: border-box;
 }
 .App {
-    // max-width: 2000px;
-    // background-color: rgb(113, 158, 111);
     color: black;
-    // margin: 20px 20px;
     height: 100vh;
 }
 
@@ -24,8 +21,8 @@ html {
 }
 
 body {
+    // padding-top: 50px;
     font-size: rem(18px);
-    // margin: 0;
     font-family: Calibri, "Trebuchet MS", sans-serif;
     background-color: rgb(245, 245, 245);
 }
@@ -37,14 +34,14 @@ h4,
 h5,
 h6 {
     // font-family: sans-serif;
-    margin: 0 0 0.6em;
+    margin: 0;
     line-height: 1;
 }
 
 section,
 main,
 footer {
-    padding: 5px;
+    // padding: 5px;
 }
 
 img {
@@ -60,9 +57,7 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
-div {
-    padding: 5px;
-}
+
 a:hover {
     text-decoration: underline;
 }
@@ -90,4 +85,10 @@ li {
 }
 svg {
     cursor: pointer;
+    padding: 1px;
+    // margin: 10px;
+}
+
+svg:hover {
+    box-shadow: -2px -1px 3px 0 sandybrown;
 }

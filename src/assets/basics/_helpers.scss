@@ -38,8 +38,16 @@
     &.align-center {
         align-items: center;
     }
+    &.space-between {
+        justify-content: space-between;
+    }
 }
 
+.shadow {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14),
+        0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 40px -19px rgba(0, 0, 0, 0.3);
+}
 // Media helpers
 
 // .square-ratio {

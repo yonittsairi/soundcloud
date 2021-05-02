@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react'
+import { useSelector } from 'react-redux';
 import RecentSearchs from '../cmp/RecentSearchs';
 import SongContainer from '../cmp/SongContainer';
 import Filter from './../cmp/Filter';
@@ -10,6 +10,7 @@ export default function SoundCloudApp() {
 
     return (
         <section className="container">
+
             <section className="song-list" ><Filter />
                 <SongList currSongs={songs} />
             </section>

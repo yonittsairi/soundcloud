@@ -5,7 +5,7 @@ import SoundCloudApp from './pages/SoundCloudApp';
 function App() {
 
   return (
-    <div className="App">
+    <div className="App main-container">
       <SoundCloudApp />
 
     </div>

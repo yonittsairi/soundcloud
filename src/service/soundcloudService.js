@@ -11,7 +11,6 @@ var SC = require('soundcloud');
 export const soundCloudService = {
     getSongs,
     getNextSongs,
-    playSong
 }
 
 SC.initialize({
@@ -49,22 +48,10 @@ async function getNextSongs(nextHref) {
 
     }
 }
-export async function playSong() {
-    try {
-        const player = SC.stream('/tracks/293')
-        player.play()
-
-    }
-    catch (err) {
-        console.log(err);
-
-    }
-
-
-}
 
 function _saveSearch(searchWord) {
     const searchHistory = storageService.get('search') || []
+    if (searchHistory.length > 0 && searchHistory[0].word === searchWord) return searchHistory
     if (searchHistory.length === 5) searchHistory.pop()
     const id = UtilService.makeId()
     searchHistory.unshift({ word: searchWord, id })
