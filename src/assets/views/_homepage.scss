@@ -1,7 +1,8 @@
 .container {
-    margin-top: 40px;
+    padding-top: 100px;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 0.3fr;
-    grid-template-rows: auto;
+    grid-template-rows: 700px;
+    gap: 40px;
 }

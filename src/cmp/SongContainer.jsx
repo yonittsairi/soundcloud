@@ -10,7 +10,7 @@ export default function SongContainer({ songChosen }) {
     </div>
     return (
         <section className="song-container" >
-            <div className="img-containar"> <img onClick={() => setPlay(!play)} src={songChosen.artwork_url || imgUrl} alt="" /></div>
+            <div className="img-container"> <img onClick={() => setPlay(!play)} src={songChosen.artwork_url || imgUrl} alt="" /></div>
             { play && <iframe title={songChosen.title} className="song-player" height="166" scrolling="no" frameBorder="no" allow="autoplay" src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${songChosen.id}&auto_play=${true}`}></iframe>}
         </section >
     )
