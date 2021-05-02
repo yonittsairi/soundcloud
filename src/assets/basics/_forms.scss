@@ -1,0 +1,24 @@
+form > * {
+    display: block;
+    width: 200px;
+    margin: 10px 0px;
+}
+* :focus {
+    border-color: none;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+input {
+    background-color: unset;
+    border: none;
+    max-height: 400px;
+    min-height: 40px;
+    min-width: 150px;
+    margin: 15px 10px 10px 0px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    border: 1px solid $clr2;
+}
