@@ -20,13 +20,16 @@ SC.initialize({
 
 
 async function getSongs(query) {
-    const limit = 6
-    const access = 'playble'
-    let searchHistory = _saveSearch(query)
+    const searchHistory = _saveSearch(query)
     try {
-        let list = await SC.get(`/tracks?q=${query}&limit=${limit}&linked_partitioning=${true}&access=${access}`)
+        let list = await SC.get(`/tracks?q=${query}&limit=${6}&linked_partitioning=${true}`)
+
         const { collection, next_href } = list
-        return [collection, searchHistory, next_href]
+        if (collection.length < 6) {
+            const [collection1, next_href2] = await getNextSongs(next_href)
+            return [collection1, searchHistory, next_href2]
+        }
+        else return [collection, searchHistory, next_href]
     }
     catch (err) {
         console.log(err);
@@ -37,10 +40,13 @@ async function getSongs(query) {
 
 async function getNextSongs(nextHref) {
     try {
-        var list = await axios.get(nextHref)
+        let list = await axios.get(nextHref)
         const { collection, next_href } = list.data
-        console.log();
-        return [collection, next_href]
+        if (collection.length < 6) {
+            let [collection1, next_href2] = await getNextSongs(next_href)
+            return [collection1, next_href2]
+        }
+        else return [collection, next_href]
     }
 
     catch (err) {
@@ -50,11 +56,15 @@ async function getNextSongs(nextHref) {
 }
 
 function _saveSearch(searchWord) {
+    const historyLimit = 5
     const searchHistory = storageService.get('search') || []
-    if (searchHistory.length > 0 && searchHistory[0].word === searchWord) return searchHistory
-    if (searchHistory.length === 5) searchHistory.pop()
-    const id = UtilService.makeId()
-    searchHistory.unshift({ word: searchWord, id })
-    storageService.save('search', searchHistory)
-    return searchHistory
+    let itemExists = searchHistory.some(item => item.word === searchWord);
+    if (itemExists) { return searchHistory }
+    else {
+        if (searchHistory.length === historyLimit) searchHistory.pop()
+        const id = UtilService.makeId()
+        searchHistory.unshift({ word: searchWord, id })
+        storageService.save('search', searchHistory)
+        return searchHistory
+    }
 }

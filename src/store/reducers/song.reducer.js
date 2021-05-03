@@ -4,6 +4,7 @@ const initState = {
     songs: [],
     songChosen: null,
     searchHistory: searchHistory,
+    searchWord: '',
     nextHref: null
 
 }
@@ -18,6 +19,9 @@ export function songReducer(state = initState, action) {
             return state
         case 'SET_SEARCH_HISTORY':
             state = { ...state, searchHistory: action.search }
+            return state
+        case 'SET_SEARCH_WORD':
+            state = { ...state, searchWord: action.word }
             return state
         case 'SET_NEXT_HREF':
             state = { ...state, nextHref: action.nextHref }

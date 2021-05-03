@@ -21,7 +21,8 @@ html {
 }
 
 body {
-    // padding-top: 50px;
+    max-width: 2000px;
+    margin: 0 auto;
     font-size: rem(18px);
     font-family: Calibri, "Trebuchet MS", sans-serif;
     background-color: rgb(245, 245, 245);
@@ -33,16 +34,9 @@ h3,
 h4,
 h5,
 h6 {
-    // font-family: sans-serif;
     margin: 0;
     line-height: 1;
     padding: 0;
-}
-
-section,
-main,
-footer {
-    // padding: 5px;
 }
 
 img {
@@ -77,7 +71,6 @@ button:hover {
     border: 0;
     background-color: green;
     color: blanchedalmond;
-    // padding: 5px 10px;
     margin: 5px;
     cursor: pointer;
 }
@@ -88,7 +81,6 @@ li {
 svg {
     cursor: pointer;
     padding: 1px;
-    // margin: 10px;
 }
 
 svg:hover {
@@ -97,4 +89,11 @@ svg:hover {
 section {
     margin-top: 20px;
     padding: 0;
+}
+.invisible {
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
 }

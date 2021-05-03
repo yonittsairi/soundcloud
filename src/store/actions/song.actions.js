@@ -27,7 +27,6 @@ export function getNextSongs(nexthref) {
             console.log(songs);
             dispatch({ type: 'SET', songs: songs })
             dispatch({ type: 'SET_NEXT_HREF', nextHref: href })
-
         } catch (error) {
             console.error('problem loading songs', error)
         }
@@ -43,3 +42,12 @@ export function loadSong(song) {
         }
     }
 }
+// export function setSearchWord(word) {
+//     return async (dispatch) => {
+//         try {
+//             dispatch({ type: 'SET_SEARCH_WORD', searchWord: word })
+//         } catch (error) {
+//             console.error('problem loading song')
+//         }
+//     }
+// }

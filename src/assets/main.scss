@@ -1,5 +1,6 @@
 @import "setup/variables";
 @import "setup/mixins";
+@import "setup/_animations";
 
 @import "basics/helpers";
 @import "basics/forms";
@@ -10,7 +11,6 @@
 @import "cmps/songcard";
 @import "cmps/recentsearch";
 @import "cmps/songcontainer";
-@import "cmps/header";
 @import "cmps/filter";
 
 @import "views/homepage";

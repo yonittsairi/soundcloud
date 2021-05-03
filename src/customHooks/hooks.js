@@ -6,7 +6,9 @@ export const useHandlechange = () => {
         var name = ev.target.name
         var value = ev.target.type === 'number' ? +ev.target.value : ev.target.value
         if (ev.target.type === "checkbox") {
-            if (values[name]) value = values[name] === true ? false : true
+            if (values[name]) {
+                value = values[name] === true ? false : true
+            }
             else value = true
         }
         setValue({ ...values, [name]: value })

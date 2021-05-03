@@ -1,4 +1,4 @@
-import './assets/main.scss';
+
 import SoundCloudApp from './pages/SoundCloudApp';
 
 
