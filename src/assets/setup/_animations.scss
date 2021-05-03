@@ -1,11 +1,16 @@
 .chosen {
-    animation-delay: 6s;
-    animation-duration: 4s;
-    animation: fade-in;
+    animation-timing-function: ease-in-out;
+    animation: fade-in 4s;
     -webkit-animation: fade-in 5s;
     -moz-animation: fade-in 5s;
     -o-animation: fade-in 5s;
     -ms-animation: fade-in 5s;
+}
+.not {
+    visibility: hidden;
+}
+.yes {
+    visibility: visible;
 }
 .slide-out {
     animation: slide-out 7s ease-in forwards;

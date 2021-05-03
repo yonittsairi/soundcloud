@@ -9,14 +9,8 @@ export default function SongContainer({ songChosen }) {
     const url = songChosen?.artwork_url || null
     useEffect(async () => {
         async function change() {
-            if (classSong === 'chosen') {
-                await setState({ ...state, classSong: 'not' })
-
-            }
-            else {
-
-                await setState({ ...state, classSong: 'chosen' })
-            }
+            await setState({ ...state, classSong: 'not' })
+            setTimeout(() => setState({ ...state, classSong: ' yes chosen' }), 1000)
         }
 
         change()
