@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 .App {
-    color: black;
+    color: rgb(26, 22, 22);
     height: 100vh;
 }
 
@@ -36,6 +36,7 @@ h6 {
     // font-family: sans-serif;
     margin: 0;
     line-height: 1;
+    padding: 0;
 }
 
 section,
@@ -92,4 +93,8 @@ svg {
 
 svg:hover {
     box-shadow: -2px -1px 3px 0 sandybrown;
+}
+section {
+    margin-top: 20px;
+    padding: 0;
 }

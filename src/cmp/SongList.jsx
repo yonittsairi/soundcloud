@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import SongCard from './SongCard'
 import ViewListIcon from '@material-ui/icons/ViewList';
 import ViewComfyIcon from '@material-ui/icons/ViewComfy';
@@ -10,6 +10,7 @@ import { getNextSongs } from '../store/actions/song.actions'
 
 export default function SongList({ currSongs }) {
     const { nextHref } = useSelector(state => state.songModule)
+
     const dispatch = useDispatch('')
 
 
@@ -18,6 +19,7 @@ export default function SongList({ currSongs }) {
     const paginate = () => {
         dispatch(getNextSongs(nextHref))
     }
+
 
     const changeView = (classname) => {
         setsClass(classname)
@@ -35,16 +37,19 @@ export default function SongList({ currSongs }) {
     return (
         <section className="results">
 
-            <div className={className}> <div className="menu flex align-center space-between">
-                <div className="flex align-center"><ViewListIcon fontSize={'large'} onClick={() => changeView('list')} />
-                    <ViewComfyIcon fontSize={'large'} onClick={() => changeView('tile')} />
-                </div>
-                {nextHref && <ArrowForwardTwoToneIcon fontSize={'large'} onClick={paginate} />}
-            </div>
+            <div className={className}>
                 {currSongs.map(song => <SongCard key={song.id} song={song} />
                 )}
 
             </div>
+            <div className="menu flex align-center space-between">
+                <div className="flex align-center">
+                    <ViewListIcon fontSize={'large'} onClick={() => changeView('list')} />
+                    <ViewComfyIcon fontSize={'large'} onClick={() => changeView('tile')} />
+                </div>
+                {nextHref && <ArrowForwardTwoToneIcon fontSize={'large'} onClick={paginate} />}
+            </div>
+
 
         </section>
     )

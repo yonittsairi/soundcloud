@@ -1,8 +1,14 @@
 .container {
-    padding-top: 100px;
-    height: 100%;
+    padding: 2% 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 0.3fr;
-    grid-template-rows: 700px;
-    gap: 40px;
+    grid-template-columns: 0.6fr 1fr 0.3fr;
+    gap: 20px;
+}
+
+@media screen and(max-width: $narrow-breakpoint) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }

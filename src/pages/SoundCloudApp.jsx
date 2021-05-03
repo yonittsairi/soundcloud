@@ -1,3 +1,4 @@
+import { Divider } from '@material-ui/core';
 import React from 'react'
 import { useSelector } from 'react-redux';
 import RecentSearchs from '../cmp/RecentSearchs';
@@ -11,9 +12,10 @@ export default function SoundCloudApp() {
     return (
         <section className="container">
 
-            <section className="song-list" ><Filter />
+            <div className="song-list" >
+                <Filter />
                 <SongList currSongs={songs} />
-            </section>
+            </div>
             <SongContainer songChosen={songChosen} />
             <RecentSearchs />
         </section>

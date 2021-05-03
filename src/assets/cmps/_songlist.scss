@@ -1,8 +1,7 @@
 .menu {
     margin-bottom: 20px;
-    grid-column: 1/-1;
-    // background-color: rgba(128, 128, 128, 0.295);
-    padding: 5px;
+    margin-top: 5px;
+    // align-items: flex-end;
     svg {
         margin: 1px;
         background-color: rgb(210, 214, 202);
@@ -13,16 +12,17 @@
     }
 }
 .results {
-    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.list {
-    max-width: 500px;
 
+.list {
     img {
         display: none;
     }
     .card {
-        padding: 20px;
+        padding: 10px;
 
         &:hover {
             background-color: blanchedalmond;
@@ -30,76 +30,24 @@
     }
 }
 .tile {
-    max-width: 500px;
     justify-content: space-between;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 200px));
+    grid-template-columns: repeat(auto-fill, minmax(50px, 150px));
     grid-row: auto;
     display: grid;
-    gap: 8px;
+    gap: 20px;
 
+    // align-self: center;
     img {
         width: 100%;
         // height: px;
         object-fit: cover;
     }
     .card {
+        width: 100%;
         &:hover {
             .tulip {
                 display: block;
             }
         }
-    }
-}
-
-.card {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(233, 229, 224);
-    border-bottom: 1px solid #f50;
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14),
-        0px 0px 0px 0px rgba(0, 0, 0, 0.12);
-    box-shadow: 0 8px 40px -19px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    // animation: pulse 3s ease infinite alternate, nudge 5s linear infinite alternate;
-    .title {
-        font-size: 20px;
-        // text-align: center;
-        height: 40px;
-        padding: 10px;
-        overflow: hidden;
-    }
-}
-.tulip {
-    position: absolute;
-    top: 0;
-    display: none;
-    background-color: blanchedalmond;
-    height: 100%;
-    padding: 10px;
-}
-
-@keyframes pulse {
-    0%,
-    100% {
-        background-color: red;
-    }
-    50% {
-        background-color: orange;
-    }
-}
-
-@keyframes nudge {
-    0%,
-    100% {
-        transform: translate(0, 0);
-    }
-
-    50% {
-        transform: translate(150px, 0);
-    }
-
-    80% {
-        transform: translate(-150px, 0);
     }
 }
