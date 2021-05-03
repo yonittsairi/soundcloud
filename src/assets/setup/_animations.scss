@@ -1,10 +1,10 @@
 .chosen {
-    animation-timing-function: ease-in-out;
-    animation: fade-in 4s;
-    -webkit-animation: fade-in 5s;
-    -moz-animation: fade-in 5s;
-    -o-animation: fade-in 5s;
-    -ms-animation: fade-in 5s;
+    // animation-timing-function: ease-in;
+    animation: fade-in 1s;
+    -webkit-animation: fade-in 1s;
+    -moz-animation: fade-in 1s;
+    -o-animation: fade-in 1s;
+    -ms-animation: fade-in 1s;
 }
 .not {
     visibility: hidden;
@@ -64,30 +64,32 @@
 
 @keyframes slide-out {
     0% {
-        bottom: 100px;
-
+        opacity: 1;
         transform: translateX(0%);
+        bottom: 80%;
     }
     50% {
-        bottom: 100px;
-        transform: translateX(50%);
+        opacity: 0.2;
+        transform: translateX(150%);
     }
 
     100% {
-        bottom: 100px;
-
         opacity: 0;
-        transform: translateX(150%);
+
+        transform: translateX(160%);
     }
 }
 
 @media screen and (max-width: $narrow-breakpoint) {
     @keyframes slide-out {
         0% {
+            opacity: 1;
+
             transform: translateY(0%);
         }
 
         50% {
+            opacity: 0.5;
             transform: translateY(250%);
         }
 
