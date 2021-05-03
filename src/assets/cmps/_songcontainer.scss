@@ -18,25 +18,12 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
+            image-rendering: auto;
         }
     }
     .song-player {
         margin-top: 20px;
         width: 100%;
         grid-row: 2/-2;
-    }
-}
-
-@media screen and (max-width: $narrow-breakpoint) {
-    @keyframes slide-out {
-        0% {
-            transform: translateY(0%);
-        }
-
-        100% {
-            opacity: 0;
-            position: relative;
-            left: 2000px;
-        }
     }
 }

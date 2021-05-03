@@ -10,6 +10,7 @@ export default function RecentSearches() {
     }, [searchHistory])
 
     if (!searchHistory.length) return <div></div>
+
     return (<section className="recent-search">
         <h2>Recent Searchs</h2>
         <div> {searchHistory.map(searchWord => <SearchItem key={searchWord.id} searchWord={searchWord} />)}</div>

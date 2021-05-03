@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getNextSongs } from '../store/actions/song.actions'
 
 export default function SongList({ currSongs }) {
+
     const { nextHref } = useSelector(state => state.songModule)
     const dispatch = useDispatch('')
     const [className, setsClassName] = useState('list')

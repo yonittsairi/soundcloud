@@ -2,4 +2,7 @@
     input {
         width: 100%;
     }
+    input::placeholder {
+        padding: 10px;
+    }
 }
