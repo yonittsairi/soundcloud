@@ -55,15 +55,14 @@
 
 @media screen and (max-width: $narrow-breakpoint) {
     .list {
-        img {
-            display: none;
-        }
         .card {
             padding: 5px;
             height: 15%;
-            &:hover {
-                background-color: blanchedalmond;
-            }
         }
+    }
+}
+@media screen and (max-width: $mobile-breakpoint) {
+    .tile {
+        justify-content: center;
     }
 }

@@ -4,14 +4,13 @@ const initState = {
     songs: [],
     songChosen: null,
     searchHistory: searchHistory,
-    searchWord: '',
     nextHref: null
 
 }
 
 export function songReducer(state = initState, action) {
     switch (action.type) {
-        case 'SET':
+        case 'SET_SONGS':
             state = { ...state, songs: action.songs }
             return state
         case 'SET_SONG':
@@ -20,23 +19,8 @@ export function songReducer(state = initState, action) {
         case 'SET_SEARCH_HISTORY':
             state = { ...state, searchHistory: action.search }
             return state
-        case 'SET_SEARCH_WORD':
-            state = { ...state, searchWord: action.word }
-            return state
         case 'SET_NEXT_HREF':
             state = { ...state, nextHref: action.nextHref }
-            return state
-        case 'ADD':
-            state = { ...state, songs: [...state.songs, action.song] }
-            return state
-        case 'EDIT':
-            var songs = [...state.songs]
-            songs.map(c => {
-                if (c._id === action.song._id) {
-                    return action.song
-                }
-                else return c
-            })
             return state
         default:
             return state

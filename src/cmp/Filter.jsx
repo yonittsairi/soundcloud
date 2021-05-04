@@ -16,9 +16,13 @@ export default function Filter() {
     }
 
     return (
-        <div className="filter flex align-center space-between"><form ref={formRef} action="" onSubmit={getSongs} className="flex">
-            <input name='title' placeholder="Search" onChange={setValues} ></input>
-        </form>
-            <SearchSharp fontSize={'large'} onClick={getSongs} /></div>
+        <div className="filter flex align-center space-between">
+            <form ref={formRef} action="" onSubmit={getSongs} className="flex">
+                <input name='title' placeholder="Search" onChange={setValues} ></input>
+
+            </form>
+            <SearchSharp fontSize={'large'} onClick={getSongs} />
+
+        </div>
     )
 }
